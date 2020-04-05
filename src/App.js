@@ -26,24 +26,26 @@ const particlesOptions = {
   }
 }
 
+const initialState = {
+  input: '',
+  imageUrl: '',
+  box: {},
+  route: 'signin',
+  isSignedIn: false,
+  user: {
+    id: '',
+    name: '',
+    email: '',
+    entries: 0,
+    joined: ''
+  }
+}
+
 
 class App extends Component {
   constructor() {
     super();     
-    this.state = {
-      imageUrl: '',
-      input: '',
-      box: {},
-      route: 'signin',
-      isSignedIn: false,
-      user: {
-        id: '',
-        name: '',
-        email: '',
-        entries: 0,
-        joined: ''
-      }
-    }
+    this.state = initialState;
   }
 
   loadUser = (data) => {
@@ -85,7 +87,7 @@ class App extends Component {
         this.state.input)
       .then(response => {
         if(response) {
-          fetch('http://localhost:3000/image', {
+          fetch('https://frozen-cove-30127.herokuapp.com/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -113,6 +115,7 @@ class App extends Component {
 
   render() {
     const { isSignedIn, imageUrl, route, box } = this.state;
+    console.log(this.state)
     return (
       <div className='App'> 
         <Particles 

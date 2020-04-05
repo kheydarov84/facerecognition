@@ -18,7 +18,7 @@ class Signin extends React.Component  {
 	}
 
 	onSubmitSignIn = () => {
-		fetch('http://localhost:3001/signin', {
+		fetch('https://frozen-cove-30127.herokuapp.com/signin', {
 			method: 'post',
 			headers: {'Content-Type': 'application/json'},
 			body: JSON.stringify({
@@ -42,7 +42,7 @@ class Signin extends React.Component  {
 				<main className="pa4 black-80">
 				  <form className="measure">
 				    <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
-				      <legend className="f3 fw6 ph0 mh0">Sign In</legend>
+				      <legend className="f1 fw6 ph0 mh0">Sign In</legend>
 				      <div className="mt3">
 				        <label className="db fw6 lh-copy f6" htmlFor="email-address">Email</label>
 				        <input 
