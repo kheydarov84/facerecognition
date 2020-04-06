@@ -1,4 +1,4 @@
-![Home Page Image](facerecognition-homepage.jpg)
+![Home Page Image](https://photos.google.com/photo/AF1QipOJAKFZqm7_VXyj6TFxgfkKiPA4KXvM9k1uPnKC)
 # Facerecognition app
 
 ## This smart app recognizes and marks a face on a given image
